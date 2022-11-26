@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "432050031161",
+    "project_id": "jucircle-1ef35",
+    "storage_bucket": "jucircle-1ef35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432050031161:android:613c0d3e14f4ef8fa25be8",
+        "android_client_info": {
+          "package_name": "com.example.jucircle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432050031161-aj5psckpagcfvnufp2q0th4es5f1qavl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDecWtFi3RGOSwhF7YjSsUV53mAU4H7huU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432050031161-aj5psckpagcfvnufp2q0th4es5f1qavl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
