@@ -3,6 +3,7 @@ package com.example.jucircle.Registration;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -70,6 +71,8 @@ public class RegistrationActivity3 extends AppCompatActivity {
                         .child("userName").setValue(binding.etuserName.getText().toString());
                 database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
                         .child("userBio").setValue(binding.etuserbio.getText().toString());
+
+                startActivity(new Intent(getApplicationContext(),SelectionActivity.class));
             }
         });
 

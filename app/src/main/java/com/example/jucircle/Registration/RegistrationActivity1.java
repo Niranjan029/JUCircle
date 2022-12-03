@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.jucircle.FirstPageActivity;
 import com.example.jucircle.Users.Users;
 import com.example.jucircle.databinding.ActivityRegistration1Binding;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,35 +40,37 @@ public class RegistrationActivity1 extends AppCompatActivity {
         getSupportActionBar().hide();
         database = FirebaseDatabase.getInstance();
         storage= FirebaseStorage.getInstance();
-       images = new ArrayList<>();
-//
-           database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
-                   .child("image"+33).addValueEventListener(new ValueEventListener() {
-               @Override
-               public void onDataChange(@NonNull DataSnapshot snapshot) {
-                           Users users = snapshot.getValue(Users.class);
-                             Picasso.get().load(users.getProfilePic()).into(binding.img1);
-               }
 
-               @Override
-               public void onCancelled(@NonNull DatabaseError error) {
+        if(FirebaseAuth.getInstance().getCurrentUser()==null) {
+            startActivity(new Intent(getApplicationContext(), FirstPageActivity.class));
+        }
+            database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                    .child("image" + 33).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            Users users = snapshot.getValue(Users.class);
+                            Picasso.get().load(users.getProfilePic()).into(binding.img1);
+                        }
 
-               }
-           });
-          database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
-                  .child("image"+34).addValueEventListener(new ValueEventListener() {
-                      @Override
-                      public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                          Users users = snapshot.getValue(Users.class);
-                          Picasso.get().load(users.getProfilePic()).into(binding.img2);
-                      }
+                        }
+                    });
+            database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                    .child("image" + 34).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                      @Override
-                      public void onCancelled(@NonNull DatabaseError error) {
+                            Users users = snapshot.getValue(Users.class);
+                            Picasso.get().load(users.getProfilePic()).into(binding.img2);
+                        }
 
-                      }
-                  });
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
 
 
