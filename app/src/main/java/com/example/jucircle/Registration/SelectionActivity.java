@@ -9,7 +9,6 @@ import android.widget.RadioButton;
 
 import com.example.jucircle.MainActivity;
 import com.example.jucircle.R;
-import com.example.jucircle.UserMode.DateActivity;
 import com.example.jucircle.databinding.ActivitySelectionBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;

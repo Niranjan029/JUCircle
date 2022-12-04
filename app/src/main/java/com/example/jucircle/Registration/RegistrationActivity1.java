@@ -44,6 +44,7 @@ public class RegistrationActivity1 extends AppCompatActivity {
         if(FirebaseAuth.getInstance().getCurrentUser()==null) {
             startActivity(new Intent(getApplicationContext(), FirstPageActivity.class));
         }
+
             database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
                     .child("image" + 33).addValueEventListener(new ValueEventListener() {
                         @Override

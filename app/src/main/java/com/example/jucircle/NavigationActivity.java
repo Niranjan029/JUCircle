@@ -23,16 +23,16 @@ import com.google.firebase.auth.FirebaseAuth;
 public class NavigationActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityNavigationBinding  binding;
+    private ActivityNavigationBinding   binding;
     DrawerLayout drawer;
+    NavigationView navigationView ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        setSupportActionBar(binding.appBarNavigation.toolbar);
+        // setSupportActionBar(binding.appBarNavigation.toolbar);
 //        binding.appBarNavigation.toolbar.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -40,8 +40,9 @@ public class NavigationActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
         drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
+        navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
