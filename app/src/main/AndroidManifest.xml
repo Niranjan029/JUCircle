@@ -20,11 +20,7 @@
             android:exported="false"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.JUCircle.NoActionBar" />
-        <activity
-            android:name=".UserMode.DateActivity"
-            android:exported="false"
-            android:label="@string/title_activity_date"
-            android:theme="@style/Theme.JUCircle.NoActionBar" />
+
         <activity
             android:name=".Registration.SelectionActivity"
             android:exported="false" />
